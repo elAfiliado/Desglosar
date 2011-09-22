@@ -1,0 +1,47 @@
+(dp1
+S'remitentesant'
+p2
+(dp3
+S'type'
+p4
+S'reference remitentes'
+p5
+sS'sortable'
+p6
+I4
+sS'sql'
+p7
+S'INTEGER REFERENCES remitentes(id) ON DELETE CASCADE'
+p8
+ssS'nombre'
+p9
+(dp10
+g4
+S'string'
+p11
+sg6
+I2
+sg7
+S'CHAR(50)'
+p12
+ssS'id'
+p13
+(dp14
+g4
+g13
+sg6
+I1
+sg7
+S'INTEGER PRIMARY KEY AUTOINCREMENT'
+p15
+ssS'email'
+p16
+(dp17
+g4
+g11
+sg6
+I3
+sg7
+S'CHAR(50)'
+p18
+ss.

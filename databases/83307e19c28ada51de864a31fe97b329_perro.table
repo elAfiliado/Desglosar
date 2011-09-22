@@ -1,0 +1,77 @@
+(dp1
+S'amon'
+p2
+(dp3
+S'sortable'
+p4
+I4
+sS'type'
+p5
+S'reference persona'
+p6
+sS'sql'
+p7
+S'INTEGER REFERENCES persona(id) ON DELETE CASCADE'
+p8
+ssS'amo'
+p9
+(dp10
+S'sortable'
+p11
+I4
+sS'type'
+p12
+S'reference persona'
+p13
+sS'sql'
+p14
+S'INTEGER REFERENCES persona(id) ON DELETE CASCADE'
+p15
+ssS'nombre'
+p16
+(dp17
+S'type'
+p18
+S'string'
+p19
+sS'sortable'
+p20
+I2
+sS'sql'
+p21
+S'CHAR(512)'
+p22
+ssS'amo_id'
+p23
+(dp24
+g18
+S'reference persona'
+p25
+sg20
+I4
+sg21
+S'INTEGER REFERENCES persona(id) ON DELETE CASCADE'
+p26
+ssS'nacimiento'
+p27
+(dp28
+g18
+S'date'
+p29
+sg20
+I3
+sg21
+S'DATE'
+p30
+ssS'id'
+p31
+(dp32
+g18
+S'id'
+p33
+sg20
+I1
+sg21
+S'INTEGER PRIMARY KEY AUTOINCREMENT'
+p34
+ss.

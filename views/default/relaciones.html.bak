@@ -1,0 +1,23 @@
+{{extend 'layout.html'}}
+<h1>Esta es la plantilla default/relaciones.html</h1>
+<h2>{{=cad}}</h2>
+
+
+{{
+import re
+
+
+
+p=re.compile("\w+[.@&\w]*")
+p2=re.compile("@\w+\.[.\w]+")
+
+txt='(pi.pi.er.e.a.d.e.@betioslo.com.perrojudio.erro; onkicaronki@hotmail.com, cecilia.prada@fastwebnet.it, gallo.moa@gmail.com, ferrer_chinchilla@yahoo.es,C. MANU@MONTSE (PORTU) (manu.mrnd@gmail.com); C. KEÑO&AVELI (PORTU) (eu_cortes@yahoo.es)'
+
+r=p.findall(txt)
+r2=p2.findall(txt)
+for i in r:    response.write(i+'<br>',escape=False)
+}} <br/> Y el siguiente <br/> {{
+for i in r2: response.write(i+'<br>',escape=False)
+
+}}
+{{=len(r)}}

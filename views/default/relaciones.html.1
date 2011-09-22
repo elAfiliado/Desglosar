@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+<h1>Esta es la plantilla default/relaciones.html</h1>
+<h2>{{=cad}}</h2>
+{{
+import re
+p=re.compile("\w")
+txt='mi perro tiene rabo'
+r=p.findall(texto)
+for i in r: response.write(i+'<br>',escape=False)
+}}Y ahora más:<br/>
+{{=r}}

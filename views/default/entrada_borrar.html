@@ -1,0 +1,47 @@
+{{extend 'layout.html'}}
+<h1>Esta es la plantilla default/entrada_mod3.html</h1>
+<h2>Formulario</h2>
+{{=form}}
+<br/>
+<h3>Tratamientos</h3>
+{{
+textual=db(db.info4.id==1).select()[0]
+txt=textual.texto
+import re
+pattern=re.compile("\w+[.@&\wÑñ]*")
+patternemail=re.compile("@\w+\.[.\w]+")
+db(db.info4.id==1).update(longitud=len(txt))
+res=pattern.findall(txt)
+res2=patternemail.findall(txt)
+
+for i in res: response.write (i+'    ')
+}}En total son {{=len(res)}} nombres sueltos <br/> {{
+for i in res2: response.write(i+'    ')
+}}En total son {{=len(res2)}} conf de emails sueltos <br/> {{
+
+i=0 
+while i<len(res):    
+    if patternemail.search(res[i]):
+        bol='True'
+    else:
+        bol='False'
+    pass
+    response.write('<br> i es: '+str(i)+' y patternemail para la palabra '+res[i]+' es '+bol ,escape=False)
+    if not patternemail.search(res[i]):
+        cadena=''
+        while not patternemail.search(res[i]):
+            cadena=cadena+' '+res[i]
+            i=i+1
+        pass
+        db.contactos.insert(nombre=cadena,email=res[i])
+        i=i+1
+   else:
+       db.contactos.insert(email=res[i])
+       i=i+1
+   pass
+pass
+}}
+
+{{
+lista=db().select(db.contactos.ALL)
+}}{{=lista}}

@@ -1,0 +1,4 @@
+
+{{extend 'layout.html'}}
+<h1>Esta es la plantilla default/entrada_mod1.html</h1>
+{{=BEAUTIFY(response._vars)}}

@@ -1,0 +1,321 @@
+timestamp: 2011-09-18T09:20:37.081000
+CREATE TABLE remitentes(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(50)
+);
+success!
+timestamp: 2011-09-18T09:20:37.144000
+CREATE TABLE contactos(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(50),
+    email CHAR(50),
+    remitentesant INTEGER REFERENCES remitentes(id) ON DELETE CASCADE
+);
+success!
+timestamp: 2011-09-18T09:20:37.187000
+CREATE TABLE info(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    texto CHAR(512)
+);
+success!
+timestamp: 2011-09-18T21:07:30.154000
+ALTER TABLE info ADD selector INTEGER;
+timestamp: 2011-09-18T21:07:30.202000
+CREATE TABLE info2(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    texto TEXT,
+    selector INTEGER
+);
+success!
+timestamp: 2011-09-18T21:14:45.054000
+ALTER TABLE info2 ADD long INTEGER;
+timestamp: 2011-09-18T21:50:26.307000
+ALTER TABLE info2 ADD longitud INTEGER;
+timestamp: 2011-09-19T03:55:23.387000
+CREATE TABLE shout(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    message CHAR(512)
+);
+success!
+timestamp: 2011-09-19T04:06:17.749000
+ALTER TABLE shout ADD mensaje CHAR(512);
+timestamp: 2011-09-19T06:12:32.739000
+CREATE TABLE info23(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    texto CHAR(30000) NOT NULL,
+    longitud CHAR(512)
+);
+success!
+timestamp: 2011-09-19T06:33:13.008000
+CREATE TABLE persona(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    nacimiento DATE
+);
+success!
+timestamp: 2011-09-19T10:37:13.484000
+CREATE TABLE autor(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512)
+);
+success!
+timestamp: 2011-09-19T10:47:27.115000
+CREATE TABLE perro(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    nacimiento DATE,
+    amon INTEGER REFERENCES persona(id) ON DELETE CASCADE
+);
+success!
+timestamp: 2011-09-19T11:02:31.280000
+ALTER TABLE perro ADD amo INTEGER REFERENCES persona(id) ON DELETE CASCADE;
+timestamp: 2011-09-19T11:50:33.444000
+ALTER TABLE perro ADD amo_id INTEGER REFERENCES persona(id) ON DELETE CASCADE;
+DROP TABLE persona;
+success!
+timestamp: 2011-09-19T11:58:59.329000
+CREATE TABLE persona(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    nacimiento DATE
+);
+success!
+DROP TABLE persona;
+success!
+timestamp: 2011-09-19T12:08:04.983000
+CREATE TABLE persona(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    nacimiento DATE
+);
+success!
+DROP TABLE persona;
+success!
+timestamp: 2011-09-19T12:08:05.211000
+CREATE TABLE persona(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    nacimiento DATE
+);
+success!
+DROP TABLE persona;
+success!
+timestamp: 2011-09-19T12:08:12.022000
+CREATE TABLE persona(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    nacimiento DATE
+);
+success!
+DROP TABLE persona;
+success!
+timestamp: 2011-09-19T12:10:39.064000
+CREATE TABLE persona(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    nacimiento DATE
+);
+success!
+DROP TABLE persona;
+success!
+timestamp: 2011-09-19T12:10:51.010000
+CREATE TABLE persona(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    nacimiento DATE
+);
+success!
+timestamp: 2011-09-19T15:06:39.142000
+CREATE TABLE info3(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    texto CHAR(30000) NOT NULL,
+    longitud CHAR(512)
+);
+success!
+timestamp: 2011-09-20T04:29:47.708000
+CREATE TABLE info4(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    texto CHAR(30000) NOT NULL,
+    longitud CHAR(512)
+);
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!
+DELETE FROM contactos;
+DELETE FROM sqlite_sequence WHERE name='contactos';
+success!
+DELETE FROM info4;
+DELETE FROM sqlite_sequence WHERE name='info4';
+success!

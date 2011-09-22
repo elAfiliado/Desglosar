@@ -1,0 +1,30 @@
+{{extend 'layout.html'}}
+<h1>default/entrada_mod2.html</h1>
+<h2>Formulario</h2>
+{{=form}}
+{{=form2}}
+
+<h3>Tratamiento darle la longitud a cada elemento</h3>
+{{
+db.persona.drop()
+rows=db().select(db.persona.ALL)
+response.write(rows)
+}}
+len(db().select(db.persona.ALL) es {{=len(db().select(db.persona.ALL))}}
+<br/>
+Más cosas: 
+{{
+ultimo=db(db.persona.id==len(db().select(db.persona.ALL))).select()[0]
+response.write(ultimo.nombre)
+}}
+<br/>Aquí el perro. 
+
+<br/>
+{{
+rows2=db().select(db.perro.ALL)
+response.write(rows2)
+response.write(len(db(db.perro.amo_id==db.persona.id).select()))
+conjuntillo=db(db.perro.amo_id==db.persona.id).select()
+}}
+<br/>
+{{=conjuntillo}}
